@@ -1,0 +1,3 @@
+[submodule "themes/myChic"]
+	path = themes/myChic
+	url = https://github.com/pruderior/myChic
