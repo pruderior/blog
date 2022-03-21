@@ -119,6 +119,6 @@ feed:
   content_limit: 
   content_limit_delim: ' '
   order_by: -date
-  icon: arena.png
+  icon: icon/arena.png
   autodiscovery: true
-  template:
+  template: template/atom.xml
