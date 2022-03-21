@@ -108,11 +108,9 @@ deploy:
 
 feed:
   enable: true
-  type:
-    - atom
-  path:
-    - atom.xml
-  limit: 0
+  type: atom
+  path: atom.xml
+  limit: false
   hub:
   content: true
   content_limit: 
