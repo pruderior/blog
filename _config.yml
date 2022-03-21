@@ -4,12 +4,12 @@
 
 # Site
 title: 张仙客来长安
-subtitle: ''
-description: ''
+subtitle: 'Seeking Wushuang'
+description: 'I came to Chang\"an to seek Wushuang'
 keywords:
 author: zxk
 language: zh-CN
-timezone: ''
+timezone: 'GMT-7'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -105,12 +105,3 @@ deploy:
   type: git
   repo: git@github.com:pruderior/pruderior.github.io.git
   branch: master
-suka_theme:
-  search:
-    enable: true
-    path: search.json
-    field: post # Page | Post | All. Default post
-  prism:
-    enable: false
-    line_number: true
-    theme: default
