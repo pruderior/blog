@@ -96,6 +96,9 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugin:
+- hexo-generator-feed
+- hexo-generator-sitemap
 ## Themes: https://hexo.io/themes/
 theme: myChic
 
@@ -116,6 +119,6 @@ feed:
   content_limit: 
   content_limit_delim: ' '
   order_by: -date
-  icon: arena.svg
+  icon: arena.png
   autodiscovery: true
   template:
