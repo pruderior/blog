@@ -110,16 +110,14 @@ feed:
   enable: true
   type:
     - atom
-    - rss2
   path:
     - atom.xml
-    - rss2.xml
-  limit: 20
+  limit: 0
   hub:
-  content:
-  content_limit: 140
+  content: true
+  content_limit: 
   content_limit_delim: ' '
   order_by: -date
-  icon: ./themes/myChic/source/arena.svg
+  icon: arena.svg
   autodiscovery: true
   template:
