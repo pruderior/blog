@@ -8,17 +8,17 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         submodules: true 
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
 
     - name: Cache node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       id: cache
       with:
         path: node_modules
@@ -27,15 +27,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install Dependencies
-      run: |
-        npm install hexo-util --save
-        npm ci
-
-    - name: Fix vulnerabilities
-      run: npm audit fix --force
-
-    - name: Debug Hexo Util
-      run: ls -R node_modules/hexo-util || echo "Hexo-util not found"
+      run: npm ci
 
     - name: Deploy
       id: deploy
