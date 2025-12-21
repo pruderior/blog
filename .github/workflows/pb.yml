@@ -29,15 +29,22 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
-    - name: Deploy
-      id: deploy
-      uses: QyInvoLing/hexo-action@1.0.6
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        user_name: pruderior  
-        user_email: pruderior@gmail.com  
-        commit_msg: ${{ github.event.head_commit.message }}  
-
-    - name: Get the output
+    - name: Setup SSH
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        echo "${{ steps.deploy.outputs.notify }}"
+        mkdir -p ~/.ssh
+        echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+    - name: Setup Git
+      run: |
+        git config --global user.name "pruderior"
+        git config --global user.email "pruderior@gmail.com"
+
+    - name: Build and Deploy
+      run: |
+        npx hexo clean
+        npx hexo generate
+        npx hexo deploy
