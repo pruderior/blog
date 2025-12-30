@@ -1,3 +1,6 @@
 [submodule "themes/myChic"]
 	path = themes/myChic
 	url = https://github.com/pruderior/myChic
+[submodule "themes/hexo-suprematism"]
+	path = themes/hexo-suprematism
+	url = https://github.com/pruderior/hexo-suprematism.git
