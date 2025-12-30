@@ -100,7 +100,7 @@ plugin:
 - hexo-generator-feed
 - hexo-generator-sitemap
 ## Themes: https://hexo.io/themes/
-theme: myChic
+theme: hexo-suprematism
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
